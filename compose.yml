@@ -1,0 +1,21 @@
+services:
+  phreaking:
+    image: phreaking-service
+    build: .
+    ports:
+      # OpenSSH
+      - "110:110"
+      - "995:995"
+      # OpenSSH over WebSocket
+      - "2052:2052"
+      - "2053:2053"
+      # Dropbear
+      - "143:143"
+      - "993:993"
+      # Dropbear over WebSocket
+      - "2082:2082"
+      - "2083:2083"
+      # Squid
+      - "3128:3128"
+      # BadVPN-UDPGW
+      - "7300:7300"
